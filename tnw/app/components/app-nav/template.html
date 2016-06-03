@@ -1,0 +1,55 @@
+<!-- main bar -->
+<md-toolbar layout-align="left center" class="md-primary md-whiteframe-z1 mainToolbar topToolbar">
+	<div class="md-toolbar-tools">
+		<!-- button -->
+		<md-button class="md-icon-button" aria-label="Settings" ng-click="toggleLeft()">
+			<div class="mainButton" flex>
+				<ng-md-icon icon='menu' style="fill: white" size="24">
+				</ng-md-icon>
+			</div>
+		</md-button>
+		<div href class="toolbarCurrentPage" ng-click="goHome()">
+			<a href>ryacurbak</a>
+		</div>
+		<span flex></span>
+	</div>
+</md-toolbar>
+<!-- side bar -->
+<div layout="row" flex="" ng-click="toggleLeft()">
+	<md-sidenav style="height: 100vh;" md-component-id="left" class="md-sidenav-left md-whiteframe-z2">
+		<!-- toolbar part of sidenav -->
+		<md-toolbar class="md-accent" ng-click="toggleLeft()">
+			<div class="md-toolbar-tools">
+				<div class="sideButton">
+					<ng-md-icon icon="menu" style="fill: white" size="24">
+					</ng-md-icon>
+				</div>
+			</div>
+		</md-toolbar>
+		<!-- actual start of sidenav -->
+		<md-content layout-padding="">
+			<md-list hide-md="" show-gt-md="">
+				<!-- 1st -->
+				<a ui-sref="home" class="navbarText">
+					<md-list-item ng-click="toggleLeft()">
+						<div class="sideNavIcons">
+							<ng-md-icon icon="home" ng-class="" style="fill: black" size="30">
+							</ng-md-icon>
+						</div>
+						<p ng-class="">Home</p>
+					</md-list-item>
+				</a>
+				<!-- 2nd -->
+				<a ui-sref="products.show" class="navbarText">
+					<md-list-item ng-click="toggleLeft()">
+						<div class="sideNavIcons">
+							<ng-md-icon icon="work" ng-class="" style="fill: black" size="30">
+							</ng-md-icon>
+						</div>
+						<p ng-class="">Products</p>
+					</md-list-item>
+				</a>
+			</md-list>
+		</md-content>
+	</md-sidenav>
+</div>

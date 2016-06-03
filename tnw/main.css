@@ -1,0 +1,409 @@
+html, body{
+  background-color: #eee !important; /*sets background of entire app to a greyish color*/
+}
+
+html::-webkit-scrollbar{
+  display: none; /*removes scrollbar from entire app*/
+}
+
+a {
+  text-decoration: none; /*<a> links no longer have underlines*/
+}
+
+/* home */
+
+.homeImage{ /*class for homepage image. all other homeImage# classes should be changed to this*/
+  width: 100% !important;
+  height: calc(100vh - 68px);
+  position: relative;
+}
+
+.homeBlock{ /*block*/
+  width: 100%;
+}
+
+.homeFullDiv{ /*so everything can be inside the image*/
+  top: 50px;
+  right: 0px;
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+}
+
+.homeCard{ /*card*/
+  margin-top: 4em;
+  margin-left: 4em;
+  margin-right: 4em;
+}
+
+.homeCardContent{ /*where the card can be occupied*/
+  padding: 1em;
+}
+
+.homeCardTitle{ /*text inside card*/
+  float: left;
+}
+
+/* /home */
+
+/* app-nav */
+
+.mainToolbar{ /*forces nav-bar to be above everything*/
+  z-index: 4;
+}
+
+.navbarText{ /*colors and removes underline from links in the hamburger menu on nav bar*/
+  text-decoration: none;
+  color: black;
+}
+
+.mainButton{ /*positions buttons in main bar*/
+  padding-top: 0em;
+}
+
+.sideButton{ /*positions buttons in side bar*/
+  padding-top: .2em;
+  padding-right: .5em;
+}
+
+/* /app-nav */
+
+
+.toolbarCurrentPage{ /*positions the word 'phrase' in the nav bar*/
+  margin-top: 0em;
+  margin-left: .6em;
+}
+
+.floatingActionButton { /*positions *ALL* fabs*/
+  float: right;
+  margin-top: -3.5em;
+  margin-right: 5em;
+  z-index: 100 !important;
+}
+
+.toolbarCurrentUser{ /*styles the button that has your username in it*/
+  font-size: 13px;
+  padding-right: .5em;
+}
+
+.requiredPickerError{ /*an error for required pickers*/
+  color: rgb(244,67,54);
+  font-size: 12px;
+  line-height: 24px;
+  margin-top: -1em;
+  margin-left: -8em;
+}
+
+.whiteBack{ /*for the article cards in article.list... makes the background white*/
+  background-color: #FFF !important;
+}
+ 
+div.feature a { /*styles the article cards in article.list... makes them clickable links*/
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none; /* No underlines on the link */
+    z-index: 10; /* Places the link above everything else in the div */
+    background-color: #FFF; /* Fix to make div clickable in IE */
+    opacity: 0; /* Fix to make div clickable in IE */
+    filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+}
+
+.articleContentCardDiv{/*container for the cards in article.list*/
+  height: inherit;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.articleContentCard{ /*styling for the cards themselves*/
+  text-align: left;
+  font-size: 6px;
+  white-space: pre-wrap; /*preserves the indents and line breaks from articles*/
+}
+
+.articleAnnotationCard{ /*this feature was disabled... go back in the git repo to look at this when it was used (around 7/21/15)*/
+  width: 30%;           /*it was good for quickly showing and hiding the content of annotations in clean-looking cards*/
+  float: left;          /*anyway... this set width and positioning for the card itself in articles.show*/
+  display: inline-block;
+  clear: both;
+  padding: 0em 1em 0em 1em;
+}
+
+.articleAnnotationCardDelete{ /*again disabled... aligned the delete button*/
+  float:right;
+}
+
+.articleAnnotationCardContainer{ /*disabled... applies margin to the container holding the cards*/
+    margin-top: 4.5em;
+    margin-left: 3%;
+}
+
+.articleAnnotationCardQuoteTitle{ /*disabled... styles the title of the annotation. feature not supported ATM, defaulted to*/
+  margin: .75em;                                                                                      /* annotationTitle */
+  font-size: 20px;
+  font-style:italic
+}
+
+.articleAnnotationCardQuote{/*disabled... styled the quoted portion of text for the annotation*/
+  color: gray;
+  font-style: italic;
+  font-size: 11px;
+}
+
+.articleAnnotationCardAnnotationTitle{/*disabled... dont remember what this did pretty sure we didnt use it... */
+  margin: .5em;
+}
+
+.articleAnnotationCardAnnotation{ /*disabled... styled the annotation made by user*/
+  margin: 1em;
+  font-size: 14px;
+}
+
+.articleCardContainer{ /*container for the article card. md-content tag is white by default so it needed to be changed to trans*/
+  background-color: transparent !important;
+}
+
+.positioner{ /*positions SOME fabs... I know they need a lot of positioning*/
+  float: right;
+  margin-right: 10%;
+}
+
+.positioner2{ /*positioned another fab*/
+  float: right;
+  margin-right: 10%;
+}
+
+.articleTitleInput{ /* a class in article.new/pdf/url for articl titles input field !!not used!!*/
+
+}
+
+.articleAuthorInput{ /*makes input field half a line in article.new/pdf/url for author field*/
+  float: left;  /*align left*/
+  width: 50%;
+}
+
+.articleSourceInput{ /*makes input field half a line in article.new/pdf/url for source field*/
+  float: right; /*aligh right*/
+  width: 50%;
+}
+
+.articleClassroomInput{ /*makes selector half a line in article.new/pdf/url for classroom seletion*/
+  clear: both; /*new line*/
+  float: left; /*align left*/
+  width: 45%;
+}
+
+.articleDateTimeInput{ /*makes input half a line in article.new/pdf/url for dateTime field*/
+  float: right;
+  width: 45%;
+}
+
+.articleAssignmentDescriptionInput{ /*positions in articles.new/pdf/url*/
+  clear: both;
+}
+
+.articleContentInput{ /*postions in articles.new*/
+  clear: both;
+} 
+
+.articlePDFInput{ /*poitions the PDF input field in articles.pdf*/
+  clear: both;
+}
+
+.articleURLInput{ /*positions the url input field in articles.url*/
+  clear: both;
+}
+
+.articlesPage{ /* pads the articles.list view*/
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.classroomsAddPage{ /*pad the classrooms.new view*/
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 2em;
+}
+
+.pageTitle{ /*sets size for the titles on various pages... ie. articles.list and classrooms.list*/
+  font-size: 30px;
+  margin-bottom: 0px;
+}
+
+.articleInfoTitle{ /* styles the 'article info' titl in artices.new/pdf/url */
+  clear: both;
+}
+
+.pageSubTitle{/*styles various pages' subtitles*/
+  color: gray; 
+}
+
+.fabSpeedDial5{ /*verticle alignment of fabs. each needs individual alignment VERTICAL ONLY*/
+  float: right;
+  position:fixed;
+  margin-top: .34em;
+  z-index: 11 !important;
+  margin-left: -.68em;
+}
+
+.fabSpeedDial4{ /*VERTICAL ALIGNMENT ONLY of fabs*/
+  float: right;
+  position:fixed;
+  margin-top: 2.22em;
+  z-index: 11 !important;
+  margin-left: -.68em;
+}
+
+.fabSpeedDial3{ /*VERTICAL ALIGNMENNT ONLY of fabs*/
+  float: right;
+  position:fixed;
+  margin-top: .35em;
+  z-index: 11 !important;
+  margin-left: -.68em;
+}
+
+.fabSpeedDial2{ /*VERTICAL ALIGNMENT ONLY of fabs*/
+  float: right;
+  position:fixed;
+  margin-top: 6.22em;
+  z-index: 11 !important;
+  margin-left: -.68em;
+}
+
+.fabSpeedDial{ /*VERTICAL ALIGNMENT ONLY of fabs*/
+  float: right;
+  position:fixed;
+  margin-top: 11.6em;
+  z-index: 11 !important;
+}
+
+.md-fab{ /*some padding for ALL fabs*/
+  padding-top: .5em;
+}
+
+.fabSpeedDial .md-fab:hover, .fabSpeedDial .md-fab.md-focused, 
+.fabSpeedDial2 .md-fab:hover, .fabSpeedDial2 .md-fab.md-focused, 
+.fabSpeedDial3 .md-fab:hover, .fabSpeedDial3 .md-fab.md-focused, 
+.fabSpeedDial4 .md-fab:hover, .fabSpeedDial4 .md-fab.md-focused,
+.fabSpeedDial5 .md-fab:hover, .fabSpeedDial5 .md-fab.md-focused { /*styles ALL fabs that are hovered*/
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), inset 0 0 100px 100px rgba(0, 0, 0, 0.3) !important;
+}
+
+.fabSpeedDial .lock-size { /* needed for correct fundtionality of fabs*/
+  min-width: 50px;
+  min-height: 50px;
+  width: 50px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+.articleContentCardFooter{ /*styles the footers of cards in article.show... displays the article title*/
+  height: 1.2em;
+  text-overflow: ellipsis; /*bugged... sometimes working, sometimes not... havnt looked into a solution*/
+  white-space: nowrap;
+  overflow: hidden;
+  padding-right: 1em;
+}
+
+.zRaise2 /*for shadows on various elements*/
+{
+  box-shadow:0 8px 17px rgba(0,0,0,.2)
+}
+
+.articleCard /*the card in the article.show view*/
+{
+  padding: 2rem;
+  z-index: 7;
+  margin-top: 5em;
+  width: 60%;
+  margin-right: auto; /*centers the card*/
+  margin-left: auto; /*centers the card*/
+}
+
+.articleCardClassroom{ /*!!not used!! for showing the classroom on the article.show view*/
+  color: #777;
+  font-weight: bold;
+  text-align: right;
+  float: right;
+}
+
+.articleCardTitle{ /*styles the title of the article on the article.show view*/
+  margin-top: 12px;
+  margin-bottom: 0px;
+  margin-left: 32px;
+  margin-right: 32px;
+  font-size: 3em;
+  font-weight: bold;
+  color: #333;
+}
+
+.articleCardAuthor{/*styles the author of the article on the article.show view*/
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: 32px;
+  margin-right: 32px;
+  color: #777;
+  font-weight: bold;
+  text-align: left;
+}
+
+.articleCardContent{ /*styles the content of the article on the article.show view*/
+  text-decoration: none;
+  line-height: 1.7;
+  color: #777;
+  margin-top: 0px;
+  margin-left: 32px;
+  margin-right: 32px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: keep-all;
+}
+
+.articleCardSource{ /*styles the source of the article on the article.show view*/
+  margin-right: .25em;
+  color: #AAA;
+  text-align: right;
+  font-family: 'Roboto', sans-serif;;
+}
+
+.deleteBtn{ /*styles the delete button fab button on various views*/
+  margin-bottom: 40px;
+}
+
+.sideNavIcons{ /*styles fab buttons*/
+  padding-right: 1.3em;
+  margin-bottom: -.6em;
+}
+
+.thumbnail { /*not sure what this does or even if we use it...*/
+  float: left;
+  width: 110px;
+  height: 90px;
+  margin: 5px;
+}
+
+.md-mini{ /*for mini fab buttons*/
+  padding-top: .1em!important;
+}
+
+.text_line { /*again no idea if we use this or what it is*/
+  clear: both;
+  margin-bottom: 2px;
+}
+
+.listdemoBasicUsage md-divider { /*probably useless. copied and pasted from an md demo*/
+  margin-top: 10px;
+  margin-bottom: 10px; 
+}
+
+textarea { /*styles all the text area tags*/
+ -webkit-box-sizing: border-box; /*for browser compatibility... we need more of this*/
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+  width: 100%;
+  resize: none;
+  margin-right: auto;
+}

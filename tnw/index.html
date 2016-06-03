@@ -1,0 +1,21 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+	<meta charset="utf-8"/>
+	<title>ryacurbak</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/>
+	<link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>
+</head>
+<body>
+	<div ng-controller='AppController'>
+		<div flex ng-show="showMenu">
+			<app-nav></app-nav>
+		</div>
+		<div class="mainView contentV" flex ui-view></div>
+	</div>
+	<script src="/app/index.js"></script>
+</body>
+
+</html>
